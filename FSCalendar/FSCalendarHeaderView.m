@@ -217,7 +217,7 @@
             break;
         }
     }
-    text = usesUpperCase ? text.uppercaseString : text;
+    text = usesUpperCase ? text.capitalized : text;
     cell.titleLabel.text = text;
     [cell setNeedsLayout];
 }

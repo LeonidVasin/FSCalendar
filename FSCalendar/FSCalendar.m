@@ -1384,17 +1384,17 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             _calendarWeekdayView = calendarWeekdayView;
         }
         
-        if (_scrollEnabled) {
-            if (!_deliver) {
-                FSCalendarHeaderTouchDeliver *deliver = [[FSCalendarHeaderTouchDeliver alloc] initWithFrame:CGRectZero];
-                deliver.header = _calendarHeaderView;
-                deliver.calendar = self;
-                [_contentView addSubview:deliver];
-                self.deliver = deliver;
-            }
-        } else if (_deliver) {
-            [_deliver removeFromSuperview];
-        }
+//        if (_scrollEnabled) {
+//            if (!_deliver) {
+//                FSCalendarHeaderTouchDeliver *deliver = [[FSCalendarHeaderTouchDeliver alloc] initWithFrame:CGRectZero];
+//                deliver.header = _calendarHeaderView;
+//                deliver.calendar = self;
+//                [_contentView addSubview:deliver];
+//                self.deliver = deliver;
+//            }
+//        } else if (_deliver) {
+//            [_deliver removeFromSuperview];
+//        }
         
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
