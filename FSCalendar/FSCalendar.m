@@ -1398,22 +1398,22 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-        if (self.showsScopeHandle) {
-            if (!_scopeHandle) {
-                FSCalendarScopeHandle *handle = [[FSCalendarScopeHandle alloc] initWithFrame:CGRectZero];
-                handle.calendar = self;
-                [self addSubview:handle];
-                self.scopeHandle = handle;
-                _needsAdjustingViewFrame = YES;
-                [self setNeedsLayout];
-            }
-        } else {
-            if (_scopeHandle) {
-                [self.scopeHandle removeFromSuperview];
-                _needsAdjustingViewFrame = YES;
-                [self setNeedsLayout];
-            }
-        }
+//        if (self.showsScopeHandle) {
+//            if (!_scopeHandle) {
+//                FSCalendarScopeHandle *handle = [[FSCalendarScopeHandle alloc] initWithFrame:CGRectZero];
+//                handle.calendar = self;
+//                [self addSubview:handle];
+//                self.scopeHandle = handle;
+//                _needsAdjustingViewFrame = YES;
+//                [self setNeedsLayout];
+//            }
+//        } else {
+//            if (_scopeHandle) {
+//                [self.scopeHandle removeFromSuperview];
+//                _needsAdjustingViewFrame = YES;
+//                [self setNeedsLayout];
+//            }
+//        }
 #pragma GCC diagnostic pop
         
         _collectionView.pagingEnabled = YES;

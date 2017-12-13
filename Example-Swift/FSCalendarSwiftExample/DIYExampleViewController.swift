@@ -42,6 +42,8 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
         calendar.today = nil // Hide the today circle
         calendar.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell")
+        calendar.pagingEnabled = false;
+        calendar.scrollEnabled = true;
 //        calendar.clipsToBounds = true // Remove top/bottom line
         
         calendar.swipeToChooseGesture.isEnabled = true // Swipe-To-Choose
