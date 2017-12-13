@@ -62,7 +62,7 @@
         self.sectionRowCounts = NULL;
         
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        self.sectionInsets = UIEdgeInsetsMake(25, 0, 25, 0);
+        self.sectionInsets = UIEdgeInsetsMake(5, 0, 5, 0);
         
         self.itemAttributes = [NSMutableDictionary dictionary];
         self.headerAttributes = [NSMutableDictionary dictionary];
@@ -107,7 +107,7 @@
     self.headerReferenceSize = ({
         CGSize headerSize = CGSizeZero;
         if (self.calendar.floatingMode) {
-            CGFloat headerHeight = self.calendar.preferredWeekdayHeight*1.5+self.calendar.preferredHeaderHeight;
+            CGFloat headerHeight = 75;
             headerSize = CGSizeMake(self.collectionView.fs_width, headerHeight);
         }
         headerSize;
