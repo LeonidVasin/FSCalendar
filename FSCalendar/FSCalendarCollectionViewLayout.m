@@ -62,7 +62,7 @@
         self.sectionRowCounts = NULL;
         
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        self.sectionInsets = UIEdgeInsetsMake(5, 0, 5, 0);
+        self.sectionInsets = UIEdgeInsetsMake(25, 0, 25, 0);
         
         self.itemAttributes = [NSMutableDictionary dictionary];
         self.headerAttributes = [NSMutableDictionary dictionary];
@@ -144,7 +144,7 @@
         NSInteger columnCount = 7;
         size_t columnSize = sizeof(CGFloat)*columnCount;
         CGFloat *widths = malloc(columnSize);
-        CGFloat contentWidth = self.collectionView.fs_width - self.sectionInsets.left - self.sectionInsets.right;
+        CGFloat contentWidth = self.collectionView.fs_width - 25.0 - 25.0;
         FSCalendarSliceCake(contentWidth, columnCount, widths);
         widths;
     });
@@ -416,7 +416,7 @@
                     break;
                 }
                 case UICollectionViewScrollDirectionVertical: {
-                    x = self.lefts[column];
+                    x = 25+self.lefts[column];
                     if (!self.calendar.floatingMode) {
                         y = self.tops[row] + indexPath.section * self.collectionView.fs_height;
                     } else {

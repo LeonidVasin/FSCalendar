@@ -44,6 +44,7 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         calendar.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell")
         calendar.pagingEnabled = false;
         calendar.scrollEnabled = true;
+        calendar.layoutMargins = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
 //        calendar.clipsToBounds = true // Remove top/bottom line
         
         calendar.swipeToChooseGesture.isEnabled = true // Swipe-To-Choose
