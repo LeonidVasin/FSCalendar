@@ -187,7 +187,7 @@
         CGFloat *tops = malloc(rowSize);
         tops[0] = self.sectionInsets.top;
         for (int i = 1; i < rowCount; i++) {
-            tops[i] = tops[i-1] + self.heights[i-1];
+            tops[i] = 3 + tops[i-1] + self.heights[i-1];
         }
         tops;
     });
