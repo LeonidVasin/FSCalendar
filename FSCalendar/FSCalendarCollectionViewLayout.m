@@ -227,7 +227,7 @@
                     sectionHeight += self.heights[j];
                 }
                 self.sectionHeights[i] = sectionHeight + 3*6;
-                height += sectionHeight;
+                height += sectionHeight + 3*6;
             }
             free(self.sectionTops);
             self.sectionTops = malloc(sizeof(CGFloat)*self.numberOfSections);
