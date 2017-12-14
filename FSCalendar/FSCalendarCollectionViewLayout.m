@@ -107,7 +107,7 @@
     self.headerReferenceSize = ({
         CGSize headerSize = CGSizeZero;
         if (self.calendar.floatingMode) {
-            CGFloat headerHeight = 75;
+            CGFloat headerHeight = 81.0;
             headerSize = CGSizeMake(self.collectionView.fs_width, headerHeight);
         }
         headerSize;
@@ -226,7 +226,7 @@
                 for (int j = 0; j < rowCount; j++) {
                     sectionHeight += self.heights[j];
                 }
-                self.sectionHeights[i] = sectionHeight;
+                self.sectionHeights[i] = sectionHeight + 3*6;
                 height += sectionHeight;
             }
             free(self.sectionTops);
@@ -447,7 +447,7 @@
         UICollectionViewLayoutAttributes *attributes = self.headerAttributes[indexPath];
         if (!attributes) {
             attributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:indexPath];
-            attributes.frame = CGRectMake(0, self.sectionTops[indexPath.section], self.collectionView.fs_width, 81.0);
+            attributes.frame = CGRectMake(0, self.sectionTops[indexPath.section], self.collectionView.fs_width, self.headerReferenceSize.height);
             self.headerAttributes[indexPath] = attributes;
         }
         return attributes;
