@@ -146,6 +146,8 @@
         CGFloat *widths = malloc(columnSize);
         CGFloat contentWidth = self.collectionView.fs_width - 25.0 - 25.0;
         FSCalendarSliceCake(contentWidth, columnCount, widths);
+        widths[0] += 25.0;
+        widths[6] += 25.0;
         widths;
     });
     
@@ -416,7 +418,7 @@
                     break;
                 }
                 case UICollectionViewScrollDirectionVertical: {
-                    x = 25+self.lefts[column];
+                    x = self.lefts[column];
                     if (!self.calendar.floatingMode) {
                         y = self.tops[row] + indexPath.section * self.collectionView.fs_height;
                     } else {
