@@ -227,7 +227,7 @@
                     sectionHeight += self.heights[j];
                 }
                 self.sectionHeights[i] = sectionHeight + 3*6;
-                height += sectionHeight + 3*6;
+                height += sectionHeight;
             }
             free(self.sectionTops);
             self.sectionTops = malloc(sizeof(CGFloat)*self.numberOfSections);
@@ -371,7 +371,7 @@
         
         NSInteger endSection = [self searchEndSection:rect :startSection :self.numberOfSections-1];
         NSInteger endRowIndex = ({
-            CGFloat heightDelta2 = MAX(CGRectGetMaxY(rect) - self.sectionTops[endSection]- self.headerReferenceSize.height - self.sectionInsets.top, 0);
+            CGFloat heightDelta2 = MAX(CGRectGetMaxY(rect) - self.sectionTops[endSection]- self.headerReferenceSize.height - 3*6 - self.sectionInsets.top, 0);
             NSInteger endRowCount = FSCalendarCeil(heightDelta2/self.estimatedItemSize.height);
             NSInteger endRowIndex = endRowCount - 1;
             endRowIndex;
