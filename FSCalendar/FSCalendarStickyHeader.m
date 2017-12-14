@@ -60,15 +60,11 @@
     
     _contentView.frame = self.bounds;
     
-    CGFloat weekdayHeight = _calendar.preferredWeekdayHeight;
-    CGFloat weekdayMargin = weekdayHeight * 0.1;
     CGFloat titleWidth = _contentView.fs_width;
     
-    self.weekdayView.frame = CGRectMake(0, _contentView.fs_height-weekdayHeight-weekdayMargin, self.contentView.fs_width, weekdayHeight);
+    self.weekdayView.frame = CGRectMake(0, 57, self.contentView.fs_width, 14);
     
-    CGFloat titleHeight = [@"1" sizeWithAttributes:@{NSFontAttributeName:self.calendar.appearance.headerTitleFont}].height*1.5 + weekdayMargin*2;
-    
-    _titleLabel.frame = CGRectMake(0, _contentView.fs_height-weekdayHeight-titleHeight, titleWidth,titleHeight);
+    _titleLabel.frame = CGRectMake(0, 20, titleWidth,22);
     
 }
 

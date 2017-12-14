@@ -447,7 +447,7 @@
         UICollectionViewLayoutAttributes *attributes = self.headerAttributes[indexPath];
         if (!attributes) {
             attributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:indexPath];
-            attributes.frame = CGRectMake(0, self.sectionTops[indexPath.section], self.collectionView.fs_width, self.headerReferenceSize.height);
+            attributes.frame = CGRectMake(0, self.sectionTops[indexPath.section], self.collectionView.fs_width, 81.0);
             self.headerAttributes[indexPath] = attributes;
         }
         return attributes;
